@@ -207,21 +207,19 @@ pd.merge(df1, df2, left_index=True, right_on='name')
 # pour décrire à la fin 4 caractéristiques à propos de 5 élèves
 
 # %% cell_style="split"
-df1 = pd.read_csv('data/pupils.csv')
+df1 = pd.read_csv('pupils1.csv')
 df1
 
 # %% cell_style="split"
-df2 = pd.read_csv('data/pupils2.csv')
+df2 = pd.read_csv('pupils2.csv')
 df2
 
 # %%
-df3 = pd.read_csv('data/pupils3.csv')
+df3 = pd.read_csv('pupils3.csv')
 df3
 
 # %%
-firstThree = df1.merge(df2)
-df = pd.concat([firstThree, df3], ignore_index=True)
-df
+# votre code
 
 # %% [markdown] tags=["level_intermediate"]
 # ### **exercice** - intermédiaire
@@ -230,23 +228,20 @@ df
 # d'indexer toutes les tables par la colonne `name`
 
 # %% cell_style="split" tags=["level_intermediate"]
-df1i = pd.read_csv('data/pupils.csv',
+df1i = pd.read_csv('pupils1.csv',
                   index_col='name')
 df1i
 
 # %% cell_style="split" tags=["level_intermediate"]
-df2i = pd.read_csv('data/pupils2.csv',
+df2i = pd.read_csv('pupils2.csv',
                   index_col='name')
 df2i
 
 # %% tags=["level_intermediate"]
-df3i = pd.read_csv('data/pupils3.csv', index_col='name')
+df3i = pd.read_csv('pupils3.csv', index_col='name')
 df3i
 
 # %% tags=["level_intermediate"]
 # votre code
 
 # %%
-firstThreeI = df1i.merge(df2i, left_index=True, right_on="name")
-finalI = pd.concat([firstThreeI, df3i])
-finalI
